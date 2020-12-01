@@ -5,7 +5,7 @@
 # or prints just the number if none of those cases are true.
 
 def fizzbuzz(input_number):
-    for n in range(int(input_number), -1, -1):
+    for n in range(int(input_number), 0, -1):
         if n % 3 == 0 and n % 5 == 0:
             print('Testing')
         elif n % 3 == 0:

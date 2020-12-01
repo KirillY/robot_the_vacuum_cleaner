@@ -1,12 +1,20 @@
+# Write a program in any programming language that counts backwards from value provided by user to 1 and prints: 
+# “Agile” if the number is divisible by 5, 
+# “Software” if the number is divisible by 3, 
+# “Testing” if the number is divisible by both,
+# or prints just the number if none of those cases are true.
+
 def fizzbuzz(input_number):
-    input_number += 1
-    for n in range(input_number)[::-1]:
+    for n in range(int(input_number), -1, -1):
         if n % 3 == 0 and n % 5 == 0:
-            print(n, 'Testing')
+            print('Testing')
         elif n % 3 == 0:
-            print(n, 'Software')
+            print('Software')
         elif n % 5 == 0:
-            print(n, 'Agile')
+            print('Agile')
+        else:
+            print(n)
 
 if __name__ == "__main__":
-    fizzbuzz(50)
+    input_number = input("Enter the number:")
+    fizzbuzz(input_number)
